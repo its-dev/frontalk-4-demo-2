@@ -1,0 +1,40 @@
+.messages
+    position: relative
+    display: flex
+    justify-content: flex-end
+    flex-direction: column
+    height: calc(100% - 48px)
+    padding-bottom: 85px
+    &_scroll
+        padding: 20px
+        overflow-y: auto
+        overflow-x: hidden
+    &_date
+        position: relative
+        width: 100%
+        padding: 27px 0
+        text-align: center
+        span
+            font-size: 14px
+            display: inline-block
+            color: $grey
+            &:before,&:after
+                position: absolute
+                top: 50%
+                display: inline-block
+                width: 30%
+                height: 1px
+                content: ''
+                background-color: $light
+            &:before
+                left: 0
+            &:after
+                right: 0
+    // &.active
+        // display: block
+        // display: flex
+        // .message
+        //     transition-timing-function: cubic-bezier(.4,-.04, 1, 1)
+        //     @for $i from 1 through 10
+        //         &:nth-of-type(#{$i})
+        //             animation-duration: .15s * $i

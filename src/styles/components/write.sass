@@ -1,0 +1,59 @@
+.write
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 100%
+    padding: 20px
+    border-top: 1px solid $light
+    background-color: $white
+    &Hide
+        display: none
+    &_input
+        display: flex
+        width: 100%
+        height: 45px
+        padding: 0 8px
+        border: 1px solid $light
+        background-color: #eceff1
+        border-radius: 5px
+        input
+            font-size: 16px
+            float: left
+            width: 100%
+            height: 40px
+            padding: 0 10px
+            color: $dark
+            border: 0
+            outline: none
+    &_link
+        &Attach
+            &:before
+                display: inline-block
+                float: left
+                width: 30px
+                height: 42px
+                content: ''
+                background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/attachment.png')
+                background-repeat: no-repeat
+                background-position: center
+        &Smiley
+            &:before
+                display: inline-block
+                float: left
+                width: 30px
+                height: 42px
+                content: ''
+                background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/smiley.png')
+                background-repeat: no-repeat
+                background-position: center
+        &Send
+            &:before
+                display: inline-block
+                float: left
+                width: 30px
+                height: 42px
+                margin-left: 11px
+                content: ''
+                background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/send.png')
+                background-repeat: no-repeat
+                background-position: center

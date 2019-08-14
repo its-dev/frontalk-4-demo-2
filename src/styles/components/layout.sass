@@ -1,0 +1,67 @@
+@import '../helpers/_helpers'
+    
+.layout
+    position: relative
+    display: flex
+    width: 100%
+    height: 100%
+    background-color: $white
+    &_left
+        position: relative
+        display: flex
+        flex-direction: column
+        width: 400px
+        height: 100%
+        border-right: 1px solid $light
+        background-color: $white
+    &_search
+        width: 100%
+        height: 83px
+        padding: 20px
+        border-bottom: 1px solid $light
+    &_right
+        position: relative
+        display: flex
+        flex-direction: column
+        width: calc(100% - 400px)
+        height: 100%
+        background-color: $white
+    &_chatTop
+        display: flex
+        justify-content: space-between
+        width: 100%
+        height: 47px
+        padding: 15px 29px
+        background-color: #eceff1
+        border-bottom: 1px solid $light
+        span
+            display: block
+            white-space: pre
+            text-overflow: ellipsis
+            overflow: hidden
+            font-size: 15px
+            color: $grey
+        b
+            color: $dark
+        button
+            font-size: 15px
+            user-select: none
+            cursor: pointer
+        &Hide
+            display: none
+
+
+.layoutMobile
+    .layout
+        &_left
+            position: absolute
+            width: 100%
+            z-index: 1
+        &_right
+            position: absolute
+            width: 100%
+            z-index: 2
+            left: 100%
+            transition: 0.3s
+            &Open
+                left: 0
